@@ -28,13 +28,16 @@ export default defineConfig({
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
+const API_BASE_URL = process.env.VITE_API_BASE_URL
+
 export default defineConfig({
   base: '/', // Base public path when served in production
   plugins: [react()], // Plugins to use, in this case, React
+
   server: {
     proxy: {
       '/api': {
-        target: import.meta.env.VITE_API_BASE_URL,
+        target: API_BASE_URL,
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ''),
       },

@@ -6,7 +6,7 @@ import axios from "axios"
 
 function App() {
  const [data,setData]=useState([])
- const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+ const API_BASE_URL = process.env.VITE_API_BASE_URL;
  useEffect(()=>{
  /*  fetchData() */
   noonFetch()
