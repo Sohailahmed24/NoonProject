@@ -6,7 +6,7 @@ import axios from "axios"
 
 function App() {
  const [data,setData]=useState([])
-
+ const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
  useEffect(()=>{
  /*  fetchData() */
   noonFetch()
@@ -20,7 +20,7 @@ function App() {
  } */
 
  const noonFetch=async()=>{
-  const {data}=await axios.get("/api/")
+  const {data}=await axios.get(`${API_BASE_URL}/api/`)
   console.log(data)
  }
  const noonFetchSearch=async()=>{
