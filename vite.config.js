@@ -21,11 +21,11 @@ export default defineConfig({
    },
   },
   plugins: [react()],
-})
- */
+}) */
 
 
-import { defineConfig } from 'vite';
+
+/* import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
 const API_BASE_URL = process.env.VITE_API_BASE_URL
@@ -47,4 +47,26 @@ export default defineConfig({
     outDir: 'dist', // Output directory for the production build
     sourcemap: true, // Generate source maps for debugging
   },
+}); */
+
+
+
+/* import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+
+export default defineConfig({
+  define: {
+    'process.env.VITE_API_BASE_URL': JSON.stringify('https://myapi.vercel.app/')
+  },
+  plugins: [react()],
+})
+ */
+
+
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [react()],
 });

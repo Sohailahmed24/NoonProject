@@ -1,0 +1,7 @@
+{
+    "rewrites": [
+      { "source": "/api/(.*)", "destination": "https://food.noon.com/_svc/mp-food-api-catalog/api/$1" },
+      { "source": "/guest/(.*)", "destination": "https://food.noon.com/_svc/mp-food-api-mpnoon/consumer/restaurant/outlet/details/guest/$1" }
+    ]
+  }
+  
